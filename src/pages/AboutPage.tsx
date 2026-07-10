@@ -1,94 +1,25 @@
-import React from "react";
-import { routes } from "@/routes";
-import NavbarCentered from "@/components/ui/NavbarCentered";
-import HeroBrand from "@/components/sections/hero/HeroBrand";
-import AboutTextSplit from "@/components/sections/about/AboutTextSplit";
-import FeaturesMediaSimple from "@/components/sections/features/FeaturesMediaSimple";
-import ContactCta from "@/components/sections/contact/ContactCta";
-import FooterSimple from "@/components/sections/footer/FooterSimple";
+import Button from "@/components/ui/Button";
+import TextAnimation from "@/components/ui/TextAnimation";
+import AboutFeaturesSplit from "@/components/sections/about/AboutFeaturesSplit";
+import ScrollReveal from "@/components/ui/ScrollReveal";
 
 export default function AboutPage() {
   return (
-    <div className="min-h-screen bg-background text-foreground flex flex-col">
-      <NavbarCentered
-        logo="Atlas Marketing"
-        navItems={routes.map((r) => ({ name: r.label, href: r.path }))}
-        ctaButton={{ text: "Book Demo", href: "/contact" }}
-      />
-
-      <main className="flex-grow">
-        <HeroBrand
-          brand="Atlas Marketing Group"
-          description="Elevating Costa Rican hospitality through intelligent automation and strategic marketing."
-          primaryButton={{ text: "Our Vision", href: "#vision" }}
-          secondaryButton={{ text: "Get in Touch", href: "/contact" }}
-          textAnimation="fade-blur"
-        />
-
-        <div id="vision">
-          <AboutTextSplit
-            title="Solving the Hospitality Gap"
-            descriptions={[
-              "In the bustling Costa Rican hotel market, every missed call is a missed opportunity. We recognized that staffing gaps and overwhelming inquiry volumes were costing properties valuable bookings and damaging guest experiences.",
-              "Atlas Marketing Group was founded to bridge this gap. We deploy intelligent AI voice agents and automated systems that ensure your guests always receive immediate, professional assistance, 24/7, regardless of staff availability."
-            ]}
-            textAnimation="slide-up"
-          />
-        </div>
-
-        <FeaturesMediaSimple
-          tag="Expertise"
-          title="Tailored for Costa Rica"
-          description="We understand the unique dynamics of the local tourism industry and build solutions that fit."
-          items={[
-            {
-              title: "Bilingual AI Agents",
-              description: "Seamlessly handle inquiries in both English and Spanish, catering to international and local guests alike.",
-              imageSrc: "https://images.unsplash.com/photo-1590523277543-a94d2e4eb00b?auto=format&fit=crop&q=80"
-            },
-            {
-              title: "Peak Season Ready",
-              description: "Scale your communication capacity instantly during high season without the stress of emergency hiring.",
-              imageSrc: "https://images.unsplash.com/photo-1540541338287-41700207dee6?auto=format&fit=crop&q=80"
-            }
-          ]}
-          textAnimation="fade-blur"
-        />
-
-        <ContactCta
-          tag="Get Started"
-          text="Stop missing calls and start maximizing your bookings today."
-          primaryButton={{ text: "Book a Demo", href: "/contact" }}
-          secondaryButton={{ text: "Learn More", href: "/services" }}
-          textAnimation="slide-up"
-        />
-      </main>
-
-      <FooterSimple
-        brand="Atlas Marketing Group"
-        columns={[
-          {
-            title: "Company",
-            items: [
-              { label: "Home", href: "/" },
-              { label: "About", href: "/about" },
-              { label: "Services", href: "/services" }
-            ]
-          },
-          {
-            title: "Connect",
-            items: [
-              { label: "Contact", href: "/contact" },
-              { label: "Book Demo", href: "/contact" }
-            ]
-          }
-        ]}
-        copyright="© 2024 Atlas Marketing Group. All rights reserved."
-        links={[
-          { label: "Privacy Policy", href: "#" },
-          { label: "Terms of Service", href: "#" }
-        ]}
-      />
-    </div>
+    <>
+      <div data-webild-section="AboutTextSplit"><section aria-label="About section" className="py-20"><div className="flex flex-col gap-20 mx-auto w-content-width"><div className="flex flex-col md:flex-row gap-3 md:gap-15"><div className="w-full md:w-1/2"><TextAnimation text="Elevating Costa Rican Hospitality" variant="fade-blur" gradientText={true} tag="h2" className="text-7xl 2xl:text-8xl leading-[1.15] font-semibold text-balance" /></div><div className="flex flex-col gap-2 w-full md:w-1/2"><TextAnimation key={0} text="At Atlas AI, we understand the unique rhythm of Costa Rica's boutique hotel industry. We know that every missed call is a missed opportunity to welcome a new guest." variant="fade-blur" gradientText={false} tag="p" className="text-xl md:text-2xl leading-snug text-balance" />
+<TextAnimation key={1} text="Staffing shortages and time zone differences shouldn't dictate your occupancy rates. Our sophisticated AI receptionist bridges this gap, ensuring your property delivers flawless, 24/7 service." variant="fade-blur" gradientText={false} tag="p" className="text-xl md:text-2xl leading-snug text-balance" />
+<TextAnimation key={2} text="By automating inquiries and direct bookings, we empower owners to focus on what truly matters: providing an unforgettable, high-end experience for every guest who walks through your doors." variant="fade-blur" gradientText={false} tag="p" className="text-xl md:text-2xl leading-snug text-balance" /><div className="flex flex-wrap gap-3 mt-2 md:mt-3"><Button text="Book a Demo" href="/demo" variant="primary" /><Button text="Our Services" href="/services" variant="secondary" animationDelay={0.1} /></div></div></div><div className="w-full border-b border-foreground/5" /></div></section></div>
+      <div data-webild-section="AboutFeaturesSplit"><AboutFeaturesSplit
+        tag="Our Vision"
+        title="Solving the Staffing Crisis for Boutique Hotels"
+        description="We understand the unique challenges of running a boutique hotel in Costa Rica. Our AI solutions bridge the gap between staffing shortages and flawless guest experiences."
+        primaryButton={{"text":"Book a Demo","href":"/demo"}}
+        secondaryButton={{"text":"Contact Us","href":"/contact"}}
+        items={[{"icon":"PhoneOff","title":"End Missed Reservations","description":"Capture every booking opportunity with 24/7 automated response capabilities."},{"icon":"Users","title":"Overcome Staffing Gaps","description":"Maintain premium service levels even during peak seasons or unexpected shortages."},{"icon":"MapPin","title":"Local Market Expertise","description":"Tailored specifically for the nuances and demands of Costa Rican hospitality."}]}
+        imageSrc="https://img.freepik.com/free-photo/beautiful-luxury-hotel-resort-pool-ocean-beach_74190-7437.jpg"
+        textAnimation="fade-blur"
+      /></div>
+      <div data-webild-section="ContactCta"><section aria-label="Contact section" className="py-20"><div className="w-content-width mx-auto"><ScrollReveal variant="fade-blur"><div className="flex flex-col items-center gap-8 md:gap-10 py-20 px-8 rounded card"><div className="flex flex-col items-center gap-2"><div className="px-3 py-1 mb-1 text-sm card rounded w-fit"><p>Ready to Upgrade?</p></div><TextAnimation text="Stop losing bookings to unanswered calls. Discover how our AI receptionist transforms your boutique hotel's guest experience." variant="fade-blur" gradientText={true} tag="h2" className="md:max-w-8/10 text-5xl 2xl:text-6xl leading-[1.15] font-semibold text-center text-balance" /><div className="flex flex-wrap justify-center gap-3 mt-2 md:mt-3"><Button text="Book a Demo" href="/demo" variant="primary" /><Button text="Contact Us" href="/contact" variant="secondary" animationDelay={0.1} /></div></div></div></ScrollReveal></div></section></div>
+    </>
   );
 }
