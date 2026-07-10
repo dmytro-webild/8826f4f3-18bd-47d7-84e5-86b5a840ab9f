@@ -1,82 +1,20 @@
-import React from "react";
-import { routes } from "@/routes";
-import NavbarCentered from "@/components/ui/NavbarCentered";
-import HeroBillboard from "@/components/sections/hero/HeroBillboard";
-import FeaturesDetailedSteps from "@/components/sections/features/FeaturesDetailedSteps";
-import ContactCta from "@/components/sections/contact/ContactCta";
-import FooterMinimal from "@/components/sections/footer/FooterMinimal";
+import Button from "@/components/ui/Button";
+import HeroBackgroundSlot from "@/components/ui/HeroBackgroundSlot";
+import TextAnimation from "@/components/ui/TextAnimation";
+import ImageOrVideo from "@/components/ui/ImageOrVideo";
+import ScrollReveal from "@/components/ui/ScrollReveal";
+import AvatarGroup from "@/components/ui/AvatarGroup";
+import { cls } from "@/lib/utils";
 
 export default function OurProcessPage() {
   return (
-    <div className="min-h-screen bg-background text-foreground selection:bg-primary-cta selection:text-primary-cta">
-      <NavbarCentered
-        logo="Atlas Marketing"
-        navItems={routes.map((r) => ({ name: r.label, href: r.path }))}
-        ctaButton={{ text: "Start Project", href: "/contact" }}
-      />
-
-      <main>
-        <HeroBillboard
-          tag="Our Methodology"
-          title="Data-Driven Marketing, Proven Results"
-          description="We don't just guess. Our systematic approach ensures every campaign is optimized for maximum ROI and sustainable growth."
-          primaryButton={{ text: "Explore Process", href: "#process" }}
-          secondaryButton={{ text: "Get in Touch", href: "/contact" }}
-          textAnimation="fade-blur"
-        />
-
-        <div id="process">
-          <FeaturesDetailedSteps
-            tag="The Atlas Way"
-            title="How We Build Your Success"
-            description="A transparent, collaborative, and results-oriented journey from discovery to scale."
-            textAnimation="slide-up"
-            steps={[
-              {
-                tag: "Phase 01",
-                title: "Discovery & Audit",
-                subtitle: "Understanding your brand's DNA",
-                description: "We dive deep into your business, analyzing current performance, market positioning, and competitor landscapes to identify untapped opportunities.",
-                imageSrc: "https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&q=80"
-              },
-              {
-                tag: "Phase 02",
-                title: "Strategy Development",
-                subtitle: "Crafting the blueprint",
-                description: "Based on our findings, we build a custom, multi-channel roadmap designed to hit your specific KPIs and drive measurable business outcomes.",
-                imageSrc: "https://images.unsplash.com/photo-1553877522-43269d4ea984?auto=format&fit=crop&q=80"
-              },
-              {
-                tag: "Phase 03",
-                title: "Execution & Launch",
-                subtitle: "Bringing the vision to life",
-                description: "Our specialists deploy targeted campaigns, create compelling assets, and implement tracking systems to ensure flawless execution across all platforms.",
-                imageSrc: "https://images.unsplash.com/photo-1542744173-8e7e53415bb0?auto=format&fit=crop&q=80"
-              },
-              {
-                tag: "Phase 04",
-                title: "Optimization & Scaling",
-                subtitle: "Maximizing your ROI",
-                description: "We continuously monitor data, run A/B tests, and refine tactics to improve performance, scaling what works to accelerate your growth.",
-                imageSrc: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80"
-              }
-            ]}
-          />
-        </div>
-
-        <ContactCta
-          tag="Ready to Grow?"
-          text="Let's discuss how our proven process can transform your business trajectory."
-          primaryButton={{ text: "Contact Us Today", href: "/contact" }}
-          secondaryButton={{ text: "View Our Services", href: "/services" }}
-          textAnimation="fade-blur"
-        />
-      </main>
-
-      <FooterMinimal
-        brand="Atlas Marketing Group"
-        copyright="© 2024 Atlas Marketing Group. All rights reserved."
-      />
-    </div>
+    <>
+      <div data-webild-section="HeroBillboard"><section aria-label="Hero section" className="relative pt-25 pb-20 md:pt-30"><HeroBackgroundSlot /><div className="flex flex-col gap-12 md:gap-15 w-content-width mx-auto"><div className="flex flex-col items-center gap-3 text-center"><AvatarGroup avatarsSrc={["https://img.freepik.com/free-photo/portrait-successful-man-having-stubble-posing-with-broad-smile-keeping-arms-folded_171337-1267.jpg","https://img.freepik.com/free-photo/portrait-young-businesswoman-holding-eyeglasses-hand-against-gray-backdrop_23-2148029483.jpg","https://img.freepik.com/free-photo/young-beautiful-woman-pink-warm-sweater-natural-look-smiling-portrait-isolated-long-hair_285396-896.jpg"]} label="Trusted by Costa Rican boutique hotels" className="mb-1" /><TextAnimation text="Effortless Onboarding, Immediate Results" variant="fade-blur" gradientText={true} tag="h1" className="md:max-w-8/10 text-7xl 2xl:text-8xl leading-[1.15] font-semibold text-center text-balance" /><TextAnimation text="Discover how we seamlessly integrate our AI receptionist into your boutique hotel's operations. Our process is designed to be completely hands-off for you." variant="fade-blur" gradientText={false} tag="p" className="md:max-w-7/10 text-lg md:text-xl leading-snug text-balance" /><div className="flex flex-wrap justify-center gap-3 mt-2 md:mt-3"><Button text="Get Started" href="/contact" variant="primary" /><Button text="View Pricing" href="/pricing" variant="secondary" animationDelay={0.1} /></div></div><ScrollReveal variant="fade" delay={0.2} className="w-full p-2 xl:p-3 2xl:p-4 card rounded overflow-hidden"><ImageOrVideo imageSrc="https://img.freepik.com/free-photo/beautiful-luxury-outdoor-swimming-pool-hotel-resort_74190-7433.jpg" className="aspect-4/5 md:aspect-video" /></ScrollReveal></div></section></div>
+      <div data-webild-section="FeaturesDetailedSteps"><section aria-label="Features detailed steps section" className="py-20"><div className="flex flex-col gap-8 md:gap-10"><div className="flex flex-col items-center w-content-width mx-auto gap-2"><div className="px-3 py-1 mb-1 text-sm card rounded w-fit"><p>Onboarding Process</p></div><TextAnimation text="Seamless Integration in 4 Steps" variant="fade-blur" gradientText={true} tag="h2" className="md:max-w-8/10 text-6xl 2xl:text-7xl leading-[1.15] font-semibold text-center text-balance" /><TextAnimation text="We handle the technical heavy lifting so you can focus on delivering exceptional guest experiences at your boutique hotel." variant="fade-blur" gradientText={false} tag="p" className="md:max-w-7/10 text-lg md:text-xl leading-snug text-center text-balance" /><div className="flex flex-wrap justify-center gap-3 mt-2 md:mt-3"><Button text="Get Started" href="/contact" variant="primary" /><Button text="View Features" href="/features" variant="secondary" animationDelay={0.1} /></div></div><div className="flex flex-col w-content-width mx-auto gap-5"><ScrollReveal variant="fade-blur" key="Discovery & Customization" className="flex flex-col md:flex-row justify-between 2xl:w-8/10 mx-auto gap-6 p-6 md:p-10 card rounded overflow-hidden"><div className="flex flex-col justify-between w-full md:w-1/2"><div className="flex flex-col gap-2"><div className="px-3 py-1 mb-1 text-sm card rounded w-fit"><p>Step 1</p></div><h3 className="text-7xl md:text-8xl font-semibold leading-[1.15] text-balance">Discovery & Customization</h3></div><div className="block md:hidden w-full h-px my-5 bg-accent/20" /><div className="flex flex-col gap-2"><h4 className="text-2xl md:text-3xl font-semibold leading-snug text-balance">Tailoring the AI to your hotel's unique voice.</h4><p className="text-base md:text-lg leading-snug text-balance">We learn your property's amenities, local recommendations, and brand tone to ensure the AI sounds exactly like your best concierge.</p></div></div><div className="flex flex-col w-full md:w-35/100 gap-10"><span className="hidden md:block self-end text-7xl md:text-8xl font-semibold text-accent"></span><div className="aspect-square rounded overflow-hidden -rotate-3"><ImageOrVideo imageSrc="https://img.freepik.com/free-photo/business-people-meeting-office_107420-84852.jpg" /></div></div></ScrollReveal>
+<ScrollReveal variant="fade-blur" key="System Integration" className="flex flex-col md:flex-row justify-between 2xl:w-8/10 mx-auto gap-6 p-6 md:p-10 card rounded overflow-hidden"><div className="flex flex-col justify-between w-full md:w-1/2"><div className="flex flex-col gap-2"><div className="px-3 py-1 mb-1 text-sm card rounded w-fit"><p>Step 2</p></div><h3 className="text-7xl md:text-8xl font-semibold leading-[1.15] text-balance">System Integration</h3></div><div className="block md:hidden w-full h-px my-5 bg-accent/20" /><div className="flex flex-col gap-2"><h4 className="text-2xl md:text-3xl font-semibold leading-snug text-balance">Connecting to your existing booking engine.</h4><p className="text-base md:text-lg leading-snug text-balance">Our team securely connects the AI receptionist to your PMS and booking systems, ensuring real-time availability.</p></div></div><div className="flex flex-col w-full md:w-35/100 gap-10"><span className="hidden md:block self-end text-7xl md:text-8xl font-semibold text-accent"></span><div className="aspect-square rounded overflow-hidden -rotate-3"><ImageOrVideo imageSrc="https://img.freepik.com/free-photo/programming-background-with-person-working-with-codes-computer_23-2150010125.jpg" /></div></div></ScrollReveal>
+<ScrollReveal variant="fade-blur" key="Testing & Refinement" className="flex flex-col md:flex-row justify-between 2xl:w-8/10 mx-auto gap-6 p-6 md:p-10 card rounded overflow-hidden"><div className="flex flex-col justify-between w-full md:w-1/2"><div className="flex flex-col gap-2"><div className="px-3 py-1 mb-1 text-sm card rounded w-fit"><p>Step 3</p></div><h3 className="text-7xl md:text-8xl font-semibold leading-[1.15] text-balance">Testing & Refinement</h3></div><div className="block md:hidden w-full h-px my-5 bg-accent/20" /><div className="flex flex-col gap-2"><h4 className="text-2xl md:text-3xl font-semibold leading-snug text-balance">Rigorous quality assurance before launch.</h4><p className="text-base md:text-lg leading-snug text-balance">We simulate hundreds of guest inquiries to fine-tune responses, ensuring perfect accuracy for every potential question.</p></div></div><div className="flex flex-col w-full md:w-35/100 gap-10"><span className="hidden md:block self-end text-7xl md:text-8xl font-semibold text-accent"></span><div className="aspect-square rounded overflow-hidden -rotate-3"><ImageOrVideo imageSrc="https://img.freepik.com/free-photo/business-colleagues-working-together-office_1303-28318.jpg" /></div></div></ScrollReveal>
+<ScrollReveal variant="fade-blur" key="Go Live & Support" className="flex flex-col md:flex-row justify-between 2xl:w-8/10 mx-auto gap-6 p-6 md:p-10 card rounded overflow-hidden"><div className="flex flex-col justify-between w-full md:w-1/2"><div className="flex flex-col gap-2"><div className="px-3 py-1 mb-1 text-sm card rounded w-fit"><p>Step 4</p></div><h3 className="text-7xl md:text-8xl font-semibold leading-[1.15] text-balance">Go Live & Support</h3></div><div className="block md:hidden w-full h-px my-5 bg-accent/20" /><div className="flex flex-col gap-2"><h4 className="text-2xl md:text-3xl font-semibold leading-snug text-balance">24/7 automated guest service begins.</h4><p className="text-base md:text-lg leading-snug text-balance">Your AI receptionist goes live. We provide ongoing monitoring, monthly performance reports, and continuous optimization.</p></div></div><div className="flex flex-col w-full md:w-35/100 gap-10"><span className="hidden md:block self-end text-7xl md:text-8xl font-semibold text-accent"></span><div className="aspect-square rounded overflow-hidden -rotate-3"><ImageOrVideo imageSrc="https://img.freepik.com/free-photo/receptionist-working-front-desk_23-2149303831.jpg" /></div></div></ScrollReveal></div></div></section></div>
+      <div data-webild-section="ContactCta"><section aria-label="Contact section" className="py-20"><div className="w-content-width mx-auto"><ScrollReveal variant="fade-blur"><div className="flex flex-col items-center gap-8 md:gap-10 py-20 px-8 rounded card"><div className="flex flex-col items-center gap-2"><div className="px-3 py-1 mb-1 text-sm card rounded w-fit"><p>Next Steps</p></div><TextAnimation text="Ready to automate your boutique hotel's reservations?" variant="fade-blur" gradientText={true} tag="h2" className="md:max-w-8/10 text-5xl 2xl:text-6xl leading-[1.15] font-semibold text-center text-balance" /><div className="flex flex-wrap justify-center gap-3 mt-2 md:mt-3"><Button text="Book a Demo" href="/contact" variant="primary" /><Button text="Email Us" href="mailto:hello@atlasai.com" variant="secondary" animationDelay={0.1} /></div></div></div></ScrollReveal></div></section></div>
+    </>
   );
 }
