@@ -9,4 +9,5 @@ export const routes: Route[] = [
   { path: '/about', label: 'About', pageFile: 'AboutPage' },
   { path: '/our-process', label: 'Our Process', pageFile: 'OurProcessPage' },
   { path: '/faq', label: 'Faq', pageFile: 'FaqPage' },
+  { path: '/contact', label: 'Contact', pageFile: 'ContactPage' },
 ];

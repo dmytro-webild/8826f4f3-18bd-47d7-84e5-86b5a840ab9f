@@ -38,6 +38,8 @@ export default function Layout() {
   { name: "About", href: "/about" },
   { name: "Our Process", href: "/our-process" },
   { name: "Faq", href: "/faq" },
+  { name: "Contact", href: "/contact" },
+
 
 
 
