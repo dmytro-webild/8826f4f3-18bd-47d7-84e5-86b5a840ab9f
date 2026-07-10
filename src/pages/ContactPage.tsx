@@ -1,20 +1,12 @@
-import { routes } from "@/routes";
-import NavbarCentered from "@/components/ui/NavbarCentered";
 import ContactSplitForm from "@/components/sections/contact/ContactSplitForm";
-import FeaturesIconCards from "@/components/sections/features/FeaturesIconCards";
+import ContactBar from "@/components/sections/contact/ContactBar";
 import FaqSimple from "@/components/sections/faq/FaqSimple";
-import FooterMinimal from "@/components/sections/footer/FooterMinimal";
+import { Phone, Mail, MessageCircle } from "lucide-react";
 
 export default function ContactPage() {
   return (
-    <div className="min-h-screen bg-background text-foreground flex flex-col">
-      <NavbarCentered
-        logo="Atlas Marketing Group"
-        navItems={routes.map((r) => ({ name: r.label, href: r.path }))}
-        ctaButton={{ text: "Get Started", href: "/contact" }}
-      />
-      
-      <main className="flex-grow">
+    <div className="min-h-svh bg-background text-foreground flex flex-col">
+      <div className="flex-grow">
         <ContactSplitForm
           tag="Contact Us"
           title="Let's grow your hotel's bookings."
@@ -28,18 +20,16 @@ export default function ContactPage() {
           textarea={{ name: "message", placeholder: "How can we help you?", rows: 4, required: true }}
           buttonText="Send Message"
           textAnimation="fade-blur"
-          imageSrc="https://images.unsplash.com/photo-1596436889106-be35e843f974?q=80&w=2070&auto=format&fit=crop"
+          imageSrc="http://img.b2bpic.net/free-photo/close-up-worker-checking-economic-report_1098-3521.jpg"
         />
 
-        <FeaturesIconCards
+        <ContactBar
           tag="Direct Lines"
           title="Other ways to reach us"
-          description="Prefer to talk or message directly? Here is our contact information and availability."
-          features={[
-            { icon: "📞", title: "Call Us", description: "+1 607 968 7093" },
-            { icon: "✉️", title: "Email", description: "nicoe0086@atlasmgroupnet.com" },
-            { icon: "💬", title: "WhatsApp", description: "Message us for instant support" },
-            { icon: "🕒", title: "Best Call Times", description: "9 AM - 5 PM (Costa Rica Time, CST)" }
+          options={[
+            { icon: Phone, label: "+1 607 968 7093", href: "tel:+16079687093" },
+            { icon: Mail, label: "nicoe0086@atlasmgroupnet.com", href: "mailto:nicoe0086@atlasmgroupnet.com" },
+            { icon: MessageCircle, label: "WhatsApp Us", href: "https://wa.me/16079687093" }
           ]}
           textAnimation="slide-up"
         />
@@ -55,12 +45,7 @@ export default function ContactPage() {
           ]}
           textAnimation="fade-blur"
         />
-      </main>
-
-      <FooterMinimal
-        brand="Atlas Marketing Group"
-        copyright="© 2024 Atlas Marketing Group. All rights reserved."
-      />
+      </div>
     </div>
   );
 }
