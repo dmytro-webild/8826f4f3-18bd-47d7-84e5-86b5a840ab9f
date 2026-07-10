@@ -3,12 +3,14 @@ import Layout from './components/Layout';
 import HomePage from './pages/HomePage';
 
 import AboutPage from "@/pages/AboutPage";
+import OurProcessPage from "@/pages/OurProcessPage";
 export default function App() {
   return (
     <Routes>
       <Route element={<Layout />}>
         <Route path="/" element={<HomePage />} />
         <Route path="/about" element={<AboutPage />} />
+        <Route path="/our-process" element={<OurProcessPage />} />
       </Route>
     </Routes>
   );

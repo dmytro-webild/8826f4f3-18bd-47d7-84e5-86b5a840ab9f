@@ -36,6 +36,8 @@ export default function Layout() {
     "href": "#social-proof"
   },
   { name: "About", href: "/about" },
+  { name: "Our Process", href: "/our-process" },
+
 
 ];
 
