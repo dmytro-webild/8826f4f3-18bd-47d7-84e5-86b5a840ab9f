@@ -27,9 +27,9 @@ export default function ContactPage() {
           tag="Direct Lines"
           title="Other ways to reach us"
           options={[
-            { icon: Phone, label: "+1 607 968 7093", href: "tel:+16079687093" },
+            { icon: Phone, label: "+506 8747 5330", href: "tel:+50687475330" },
             { icon: Mail, label: "nicoe0086@atlasmgroupnet.com", href: "mailto:nicoe0086@atlasmgroupnet.com" },
-            { icon: MessageCircle, label: "WhatsApp Us", href: "https://wa.me/16079687093" }
+            { icon: MessageCircle, label: "WhatsApp Us", href: "https://wa.me/50687475330" }
           ]}
           textAnimation="slide-up"
         />
