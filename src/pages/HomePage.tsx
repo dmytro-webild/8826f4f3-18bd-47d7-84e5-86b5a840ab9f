@@ -18,7 +18,7 @@ export default function HomePage() {
       description="Our AI receptionist handles 24/7 guest inquiries, scheduling, and direct bookings for your Costa Rican boutique hotel. Professional, sophisticated, and seamless."
       primaryButton={{
         text: "Call for Demo: +1 607 968 7093",
-        href: "tel:+16079687093",
+        href: "https://vapi.ai?demo=true&shareKey=8623a5c5-c22a-4c34-be2a-1475a00e6e1a&assistantId=c47eb664-98c8-4fce-bcee-29de07a8b0ef",
       }}
       secondaryButton={{
         text: "Email Inquiry",
